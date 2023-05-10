@@ -1,0 +1,25 @@
+{
+  "name": "example-telemetry",
+  "version": "1.0.0",
+  "description": "A small TS application to be monitored by SigNoz service",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "compile": "tsc",
+    "start": "npm run compile && node -r ./tracing.cjs ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Igor Gabriel Garcia Pereira",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.7.1",
+    "@opentelemetry/auto-instrumentations-node": "^0.36.6",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.38.0",
+    "@opentelemetry/sdk-node": "^0.38.0",
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.2",
+    "typescript": "^5.0.4"
+  }
+}
